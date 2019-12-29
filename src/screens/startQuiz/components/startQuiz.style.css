@@ -1,0 +1,8 @@
+.start-quiz-container {
+  margin-top: 100px;
+}
+
+.start-quiz-container .text-center {
+  display: flex;
+  justify-content: center;
+}

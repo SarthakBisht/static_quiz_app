@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import Button from "react-bootstrap/Button";
-import QuizContainer from "../../../modules/quiz";
+import Quiz from "../../../modules/quiz";
+import "./startQuiz.style.css";
 
 class StartQuizContainer extends PureComponent {
   constructor(props) {
@@ -52,9 +53,9 @@ class StartQuizContainer extends PureComponent {
       selectedQuestion
     } = this.state;
     return (
-      <div>
+      <div className="start-quiz-container">
         {startQuiz ? (
-          <QuizContainer
+          <Quiz
             quizData={quizData}
             onOptionSelected={this.onOptionSelected}
             optionsSelected={optionsSelected}
@@ -65,14 +66,16 @@ class StartQuizContainer extends PureComponent {
           />
         ) : (
           <div>
-            <h2>Welcome to quiz</h2>
-            <Button
-              data-testid="start-quiz-button"
-              onClick={this.startStopQuiz}
-              variant="primary"
-            >
-              Start Quiz
-            </Button>
+            <h2 className="mb-4 text-center">Welcome to quiz</h2>
+            <div className="text-center">
+              <Button
+                data-testid="start-quiz-button"
+                onClick={this.startStopQuiz}
+                variant="primary"
+              >
+                Start Quiz
+              </Button>
+            </div>
           </div>
         )}
       </div>

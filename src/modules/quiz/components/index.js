@@ -1,3 +1,3 @@
-import QuizContainer from "./quizContainer";
+import Quiz from "./quiz";
 
-export default QuizContainer;
+export default Quiz;

@@ -3,7 +3,7 @@ import Question from "../../question";
 import Button from "react-bootstrap/Button";
 import QuestionNavButtonBar from "../../questionNavButtonBar";
 
-const QuizContainer = ({
+const Quiz = ({
   quizData,
   onOptionSelected,
   optionsSelected,
@@ -32,8 +32,8 @@ const QuizContainer = ({
         numberOfQuestions={quizData.length}
         setSelectedQuestion={setSelectedQuestion}
       />
-      <div>{quizQuestions}</div>
-      <div>
+      <div className="d-flex justify-content-center">{quizQuestions}</div>
+      <div className="mt-2 text-center">
         <Button
           data-testid="cancel-button"
           variant="outline-secondary"
@@ -45,6 +45,7 @@ const QuizContainer = ({
           data-testid="submit-quiz-button"
           variant="primary"
           onClick={onQuizSubmit}
+          className="ml-3"
         >
           Submit Quiz
         </Button>
@@ -53,4 +54,4 @@ const QuizContainer = ({
   );
 };
 
-export default QuizContainer;
+export default Quiz;

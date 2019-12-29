@@ -2,15 +2,17 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import "./questionNavButtonBar.style.css";
 
 const QuestionNavButtonBar = ({
   selectedQuestion,
   numberOfQuestions,
   setSelectedQuestion
 }) => (
-  <div data-testid="question-nav-bar-container">
+  <div className="mb-4 text-center" data-testid="question-nav-bar-container">
     <Button
       variant="primary"
+      className="mr-2"
       disabled={selectedQuestion === 1}
       onClick={() => setSelectedQuestion(selectedQuestion - 1)}
     >
@@ -34,6 +36,7 @@ const QuestionNavButtonBar = ({
     </ButtonToolbar>
     <Button
       variant="primary"
+      className="next-button"
       disabled={selectedQuestion === numberOfQuestions}
       onClick={() => setSelectedQuestion(selectedQuestion + 1)}
     >
